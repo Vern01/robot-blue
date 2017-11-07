@@ -101,7 +101,10 @@ ENV/
 .mypy_cache/
 
 #jetbrains
-.idea
+.idea/
 
 #private_keys
 access/
+
+#vim
+*.swp

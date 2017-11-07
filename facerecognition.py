@@ -9,8 +9,9 @@ class FaceRecognition:
     dynamodb = boto3.client('dynamodb', region_name='eu-west-1')
 
     def upload_img(self, image_path, name):
+        image_name = image_path.split("/")[-1:]
         file = open(image_path, 'rb')
-        object = self.s3.Object('blue-faces', 'index/' + image_path)
+        object = self.s3.Object('blue-faces', 'index/' + image_name)
         object.put(Body=file,
                          Metadata={'FullName': name}
                          )

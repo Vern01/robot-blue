@@ -1,6 +1,8 @@
-import bluetalk as t
+import talk as t
+from facerecognition
 
 def main():
+
     t.speak("We Think Code is the best school.")
     t.speak("They created me.")
 
